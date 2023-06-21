@@ -38,11 +38,10 @@
     let coursesRate = courses.filter(course => course.rating >= 4);
     console.log(coursesRate);
     //task 2
-    let filterCourse = courses.filter(courses => courses.rating < 4);
-    let formattedCourses = filterCourse.map(course => {
-        return `${course.id} - ${course.title} - ${course.rating}`;
+    let filterCourse = courses.filter(lesson => lesson.rating < 4).map(course => {
+         `${course.id} - ${course.title} - ${course.rating}`;
     });
-    console.log(formattedCourses);
+    console.log(filterCourse);
     //task 3
     let addedCourses = [
         {
