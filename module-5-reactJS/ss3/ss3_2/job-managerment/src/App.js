@@ -32,23 +32,26 @@ class App extends Component {
         return (
             <><input value={this.state.item} onChange={(event) => this.handleChange(event.target.value)}/>
                 <button className="btn btn-danger" onClick={() => this.handleAddItem()}>ADD</button>
-                <table className="table table-striped">
-                    <thead>
-                    <tr>
-
-                        <th>ID</th>
-                        <th>todo list</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {this.state.list.map((item, index) => (
-                        <tr key={index}>
-                            <td>{index + 1}</td>
-                            <td>{item}</td>
+                <div>
+                    <h1>Todo List</h1>
+                    <table className="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>job</th>
                         </tr>
-                    ))
-                    }</tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        {this.state.list.map((item, index) => (
+                            <tr key={index}>
+                                <td>{index + 1}</td>
+                                <td>{item}</td>
+                            </tr>
+                        ))
+                        }</tbody>
+                    </table>
+                </div>
+
             </>
         )
     }
