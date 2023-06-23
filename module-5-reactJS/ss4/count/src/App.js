@@ -1,0 +1,59 @@
+import logo from './logo.svg';
+import './App.css';
+import React,{useState} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+function useIncrement(addAmount) {
+    const [count, setCount] = useState(0);
+    function increase(addAmount) {
+        setCount(count + addAmount);
+
+    }
+    return[count,increase]
+
+}
+function Counter1() {
+    const [count,increase] =useIncrement(1);
+    return(
+        <div>
+            <p> Count: {count}</p>
+            <button onClick={()=> increase(1)}>Add 1</button>
+        </div>
+    )
+}
+function Counter2() {
+    const [count, increase] = useIncrement(2);
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => increase(2)}>Add 2</button>
+        </div>
+    );
+}
+
+function App() {
+    // const [count, setCount] = useState(0)
+    // const [count2, setCount2] = useState(0)
+    // const handleAdd = () => {
+    //     setCount(prevState => prevState + 1);
+    // }
+    // const handleAdd2 = () => {
+    //     setCount2(prevState => prevState + 2);
+    // }
+    // return (
+    //     <>
+    //         <h1>Count :{count}</h1>
+    //         <button className="btn btn-warning" onClick={() => handleAdd()}>Add 1</button>
+    //         <h1>Count :{count2}</h1>
+    //         <button className="btn btn-danger" onClick={() => handleAdd2()}>Add 2</button>
+    //     </>
+    // );
+    return (
+        <div>
+            <Counter1 />
+            <Counter2 />
+        </div>
+    );
+}
+
+export default App;
