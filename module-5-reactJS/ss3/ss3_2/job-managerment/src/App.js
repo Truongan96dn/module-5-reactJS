@@ -16,7 +16,6 @@ class App extends Component {
         this.setState({
             item: event
         })
-        console.log(this.state.item)
 
     }
     handleAddItem = () => {
