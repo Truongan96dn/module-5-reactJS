@@ -2,35 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React,{useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-function useIncrement(addAmount) {
-    const [count, setCount] = useState(0);
-    function increase(addAmount) {
-        setCount(count + addAmount);
-
-    }
-    return[count,increase]
-
-}
-function Counter1() {
-    const [count,increase] =useIncrement(1);
-    return(
-        <div>
-            <p> Count: {count}</p>
-            <button onClick={()=> increase(1)}>Add 1</button>
-        </div>
-    )
-}
-function Counter2() {
-    const [count, increase] = useIncrement(2);
-
-    return (
-        <div>
-            <p>Count: {count}</p>
-            <button onClick={() => increase(2)}>Add 2</button>
-        </div>
-    );
-}
-
+import {Counter1} from "./Counter1";
+import {Counter2} from "./Counter2";
 function App() {
     // const [count, setCount] = useState(0)
     // const [count2, setCount2] = useState(0)
@@ -50,8 +23,8 @@ function App() {
     // );
     return (
         <div>
-            <Counter1 />
-            <Counter2 />
+            <Counter1/>
+            <Counter2/>
         </div>
     );
 }
