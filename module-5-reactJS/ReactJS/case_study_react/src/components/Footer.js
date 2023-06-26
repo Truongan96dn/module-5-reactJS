@@ -12,16 +12,6 @@ export function Footer() {
                                     điểm đến hấp dẫn nhất Châu Á. Chỉ cách Đà Nẵng một quãng lái xe ngắn
                                     là bốn Di sản Văn hóa Thế giới được UNESCO công nhận:
                                 </p>
-                                <p className="pl-0 pl-md-3 pl-lg-0">
-                                    <a
-                                        href="#"
-                                        className="btn btn-primary btn-with-arrow js-footer-map-toggle"
-                                    >
-                                        <i className="icon-placeholder" />
-                                        <span className="opened-text">Đóng Bản Đồ</span>
-                                        <span>Xem Trên Bản Đồ</span>
-                                    </a>
-                                </p>
                             </div>
                             <div className="mt-3 mt-md-1 mt-lg-3" />
                             <h4 className="mb-1 mb-md-2">Địa Điểm</h4>

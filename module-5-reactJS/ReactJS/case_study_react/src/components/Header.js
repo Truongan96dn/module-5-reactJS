@@ -1,3 +1,5 @@
+
+import {Link} from "react-router-dom"
 export function Header() {
     return (
         <div>
@@ -258,12 +260,11 @@ export function Header() {
                                                 id="nav-menu-item-5007"
                                                 className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4985 current_page_item"
                                             >
-                                                <a
-                                                    href="https://furamavietnam.com/vi/our-rooms/"
+                                                <Link to="/body"
                                                     className="nav-link main-menu-link"
                                                 >
                                                     LOẠI PHÒNG
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li
                                                 id="nav-menu-item-5008"
@@ -351,23 +352,23 @@ export function Header() {
                                             id="nav-menu-item-5006"
                                             className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                                         >
-                                            <a
-                                                href="https://furamavietnam.com/vi/the-resort/"
+                                            <Link to="/"
+
                                                 className="nav-link main-menu-link"
                                             >
                                                 GIỚI THIỆU
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li
                                             id="nav-menu-item-5007"
                                             className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4985 current_page_item"
                                         >
-                                            <a
-                                                href="https://furamavietnam.com/vi/our-rooms/"
+                                            <Link to="/body"
+
                                                 className="nav-link main-menu-link"
                                             >
                                                 LOẠI PHÒNG
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li
                                             id="nav-menu-item-5008"
