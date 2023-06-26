@@ -1,5 +1,5 @@
-
 import {Link} from "react-router-dom"
+
 export function Header() {
     return (
         <div>
@@ -261,9 +261,9 @@ export function Header() {
                                                 className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4985 current_page_item"
                                             >
                                                 <Link to="/body"
-                                                    className="nav-link main-menu-link"
+                                                      className="nav-link main-menu-link"
                                                 >
-                                                    LOẠI PHÒNG
+                                                    Danh sách dịch
                                                 </Link>
                                             </li>
                                             <li
@@ -332,6 +332,7 @@ export function Header() {
                                                     ƯU ĐÃI
                                                 </a>
                                             </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -354,9 +355,9 @@ export function Header() {
                                         >
                                             <Link to="/"
 
-                                                className="nav-link main-menu-link"
+                                                  className="nav-link main-menu-link"
                                             >
-                                                GIỚI THIỆU
+                                                Home
                                             </Link>
                                         </li>
                                         <li
@@ -365,32 +366,9 @@ export function Header() {
                                         >
                                             <Link to="/body"
 
-                                                className="nav-link main-menu-link"
+                                                  className="nav-link main-menu-link"
                                             >
-                                                LOẠI PHÒNG
-                                            </Link>
-                                        </li>
-                                        <li
-                                            id="nav-menu-item-5008"
-                                            className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
-                                        >
-                                            <a
-                                                href="https://furamavietnam.com/vi/culinary/"
-                                                className="nav-link main-menu-link"
-                                            >
-                                                ẨM THỰC
-                                            </a>
-                                        </li>
-                                        <li
-                                            id="nav-menu-item-5009"
-                                            className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
-                                        >
-                                            <a
-                                                href="https://furamavietnam.com/vi/meeting-and-events/"
-                                                className="nav-link main-menu-link"
-                                            >
-                                                HỘI NGHỊ VÀ SỰ KIỆN
-                                            </a>
+                                                Danh sách dịch vụ </Link>
                                         </li>
                                         <li
                                             id="nav-menu-item-5010"
@@ -400,41 +378,19 @@ export function Header() {
                                                 href="https://furamavietnam.com/vi/spa-and-fitness/"
                                                 className="nav-link main-menu-link"
                                             >
-                                                SPA
-                                            </a>
-                                        </li>
-                                        <li
-                                            id="nav-menu-item-5011"
-                                            className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
-                                        >
-                                            <a
-                                                href="https://furamavietnam.com/vi/recreation/"
-                                                className="nav-link main-menu-link"
-                                            >
-                                                GIẢI TRÍ
-                                            </a>
-                                        </li>
-                                        <li
-                                            id="nav-menu-item-5012"
-                                            className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
-                                        >
-                                            <a
-                                                href="https://furamavietnam.com/vi/destination/"
-                                                className="nav-link main-menu-link"
-                                            >
-                                                ĐIỂM ĐẾN
+                                                Danh sách khách hàng
                                             </a>
                                         </li>
                                         <li
                                             id="nav-menu-item-5013"
                                             className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                                         >
-                                            <a
-                                                href="https://furamavietnam.com/vi/furama-special-offers/"
-                                                className="nav-link main-menu-link"
+                                            <Link to="/createService"
+
+                                                  className="nav-link main-menu-link"
                                             >
-                                                ƯU ĐÃI
-                                            </a>
+                                                Tạo mới dich vụ
+                                            </Link>
                                         </li>
                                     </ul>
                                     {" "}
