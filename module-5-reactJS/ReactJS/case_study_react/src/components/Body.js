@@ -11,8 +11,14 @@ export function Body() {
                                 <div className="col-sm-12 text-center">
                                 </div>
                             </div>
-
-
+                            <div>
+                                <button className="button-35">
+                                    <Link to="/createService" style={{textDecoration:"none"}}
+                                    >
+                                        Add new Service
+                                    </Link>
+                                </button>
+                            </div>
                             <div className="row room-grid">
 
                                 <div className="col-sm-6 col-lg-4">
@@ -56,124 +62,6 @@ export function Body() {
                                                 <div className="col-auto ml-auto">
                                                     <button type="button" className="btn btn-primary">
                                                         <Link  to="/updateService">Edit</Link>
-                                                    </button>
-                                                    <button type="button" className="btn btn-danger"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                        Delete
-                                                    </button>
-                                                    <div className="popover-content d-none">
-                                                        <ul>
-                                                            <li>Thang Máy Riêng</li>
-                                                            <li>Truy Cập Internet Miễn Phí</li>
-                                                            <li>Toàn Cảnh Hướng Biển</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-6 col-lg-4">
-                                    <div className="room-card">
-                                        <div className="room-card-photo">
-                                            <img width="370" height="239"
-                                                 src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-370x239.jpg"
-                                                 className="img-fluid wp-post-image" alt=""
-                                                 srcSet="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-370x239.jpg 370w, https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-300x194.jpg 300w, https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-768x497.jpg 768w, https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-871x563.jpg 871w, https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-145x94.jpg 145w, https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F.jpg 900w"
-                                                 sizes="(max-width: 370px) 100vw, 370px"></img>
-
-                                        </div>
-                                        <div className="room-card-info">
-                                            <div className="row">
-                                                <div className="col">
-                                                    <h3 className="room-type"><a
-                                                        href="https://furamavietnam.com/vi/rooms/ocean-studio-suite/">House</a></h3>
-                                                </div>
-                                                <div className="col-auto ml-auto">
-                                                    <div className="room-card-attr">
-                                            <span data-toggle="popover" data-trigger="hover" data-placement="top"
-                                                  data-content="2 Khách" data-original-title="" title=""><i
-                                                className="icon-two-man"></i></span>
-                                                        <span data-toggle="popover" data-trigger="hover"
-                                                              data-placement="top"
-                                                              data-content="Giường King" data-original-title=""
-                                                              title=""><i
-                                                            className="icon-double-size-bed"></i></span>
-                                                        <span data-toggle="popover" data-trigger="hover"
-                                                              data-placement="top"
-                                                              data-content="Riêng Biệt" data-original-title="" title=""><i
-                                                            className="icon-bathtub"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="room-size mt-0">Diện Tích Phòng: 40.1 m<sup>2</sup></div>
-                                            <div className="row">
-                                                <div className="col">
-                                                    <div className="room-price"><span></span></div>
-                                                </div>
-                                                <div className="col-auto ml-auto">
-                                                    <button type="button" className="btn btn-primary">
-                                                        Edit
-                                                    </button>
-                                                    <button type="button" className="btn btn-danger"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                        Delete
-                                                    </button>
-                                                    <div className="popover-content d-none">
-                                                        <ul>
-                                                            <li>Thang Máy Riêng</li>
-                                                            <li>Truy Cập Internet Miễn Phí</li>
-                                                            <li>Toàn Cảnh Hướng Biển</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-6 col-lg-4">
-                                    <div className="room-card">
-                                        <div className="room-card-photo">
-                                            <img width="370" height="239"
-                                                 src="https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-370x239.jpg"
-                                                 className="img-fluid wp-post-image" alt=""
-                                                 srcSet="https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-370x239.jpg 370w, https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-300x194.jpg 300w, https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-768x496.jpg 768w, https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-1024x661.jpg 1024w, https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-450x291.jpg 450w, https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-872x563.jpg 872w, https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2-145x94.jpg 145w, https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Ocean_Deluxe-2.jpg 1542w"
-                                                 sizes="(max-width: 370px) 100vw, 370px"></img>
-
-                                        </div>
-                                        <div className="room-card-info">
-                                            <div className="row">
-                                                <div className="col">
-                                                    <h3 className="room-type"><a
-                                                        href="https://furamavietnam.com/vi/rooms/ocean-deluxe/">Room</a></h3>
-                                                </div>
-                                                <div className="col-auto ml-auto">
-                                                    <div className="room-card-attr">
-                                            <span data-toggle="popover" data-trigger="hover" data-placement="top"
-                                                  data-content="2 Khách" data-original-title="" title=""><i
-                                                className="icon-two-man"></i></span>
-                                                        <span data-toggle="popover" data-trigger="hover"
-                                                              data-placement="top"
-                                                              data-content="Giường Đôi/ Giường Đơn"
-                                                              data-original-title="" title=""><i
-                                                            className="icon-double-size-bed"></i></span>
-                                                        <span data-toggle="popover" data-trigger="hover"
-                                                              data-placement="top"
-                                                              data-content="Riêng Biệt" data-original-title="" title=""><i
-                                                            className="icon-bathtub"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="room-size mt-0">Diện Tích Phòng: 43.7 m<sup>2</sup></div>
-                                            <div className="row">
-                                                <div className="col">
-                                                    <div className="room-price"><span></span></div>
-                                                </div>
-                                                <div className="col-auto ml-auto">
-                                                    <button type="button" className="btn btn-primary">
-                                                        Edit
                                                     </button>
                                                     <button type="button" className="btn btn-danger"
                                                             data-bs-toggle="modal" data-bs-target="#exampleModal">

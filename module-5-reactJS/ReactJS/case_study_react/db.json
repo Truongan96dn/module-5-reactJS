@@ -1,0 +1,24 @@
+{
+  "service" : [
+    {
+      "id": 1,
+      "serviceName": "Phòng hướng biển",
+      "serviceType": "Room",
+      "serviceArea": 800,
+      "serviceCost": 400,
+      "maxGuest": 5,
+      "rentType": "Tháng",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 2,
+      "serviceName": "Phòng hướng ",
+      "serviceType": "House",
+      "serviceArea": 800,
+      "serviceCost": 400,
+      "maxGuest": 5,
+      "rentType": "Tháng",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    }
+  ]
+}

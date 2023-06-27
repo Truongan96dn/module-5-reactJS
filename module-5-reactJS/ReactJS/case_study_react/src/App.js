@@ -9,6 +9,9 @@ import {Footer} from "./components/Footer";
 import {CreateService} from "./components/service/CreateService";
 import React from "react";
 import {UpdateService} from "./components/service/UpdateService";
+import {CustomerList} from "./components/customer/CustomerList";
+import {CreateCustomer} from "./components/customer/CreateCustomer";
+import {UpdateCustomer} from "./components/customer/UpdateCustomer";
 
 function App() {
   return (
@@ -18,6 +21,10 @@ function App() {
             <Route path={"/body"} element={<Body/>}/>
             <Route path={"/createService"} element={<CreateService/>}/>
             <Route path={"/updateService"} element={<UpdateService/>}/>
+            <Route path={"/customer"} element={<CustomerList/>}/>
+            <Route path={"/createCustomer"} element={<CreateCustomer/>}/>
+            <Route path={"/updateCustomer"} element={<UpdateCustomer/>}/>
+
         </Routes>
         <Footer/>
     </>

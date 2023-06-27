@@ -374,22 +374,11 @@ export function Header() {
                                             id="nav-menu-item-5010"
                                             className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                                         >
-                                            <a
-                                                href="https://furamavietnam.com/vi/spa-and-fitness/"
+                                            <Link
+                                                to="/customer"
                                                 className="nav-link main-menu-link"
                                             >
                                                 Danh sách khách hàng
-                                            </a>
-                                        </li>
-                                        <li
-                                            id="nav-menu-item-5013"
-                                            className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
-                                        >
-                                            <Link to="/createService"
-
-                                                  className="nav-link main-menu-link"
-                                            >
-                                                Tạo mới dich vụ
                                             </Link>
                                         </li>
                                     </ul>
