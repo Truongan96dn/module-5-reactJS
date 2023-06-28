@@ -381,6 +381,17 @@ export function Header() {
                                                 Danh sách khách hàng
                                             </Link>
                                         </li>
+                                        <li
+                                            id="nav-menu-item-5010"
+                                            className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
+                                        >
+                                            <Link
+                                                to="/contract"
+                                                className="nav-link main-menu-link"
+                                            >
+                                                Danh sách hợp đồng
+                                            </Link>
+                                        </li>
                                     </ul>
                                     {" "}
                                 </div>

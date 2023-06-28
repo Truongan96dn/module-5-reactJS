@@ -1,9 +1,10 @@
 import {Link} from "react-router-dom";
+import React from "react";
 
 export function CustomerList() {
     return(
         <>
-            <div>
+            <div className="text-right">
                 <button className="button-35">
                     <Link to="/createCustomer" style={{textDecoration:"none"}}
                     >
@@ -39,78 +40,12 @@ export function CustomerList() {
                         <td>quy123@gmail.com</td>
                         <td>Diamond</td>
                         <td>Quang Nam</td>
-                        <td>
-                            <button className="btn btn-info">
-                                <Link to="/updateCustomer" >Edit</Link> </button>
+                        <td className="d-flex">
+                            <button className=" button-45 mx-2" style={{textDecoration:"none",backgroundColor:"aliceblue"}}>
+                                <Link to="/updateCustomer" style={{textDecoration:"none"}} >Edit</Link> </button>
                             <button
                                 type="button"
-                                className="btn btn-danger"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                            >
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Nguyen Manh</td>
-                        <td>1998-11-12</td>
-                        <td>Nam</td>
-                        <td>2020202112</td>
-                        <td>0901423412</td>
-                        <td>manh123@gmail.com</td>
-                        <td>Gold</td>
-                        <td>Quang Nam</td>
-                        <td>
-                            <button className="btn btn-info">Edit</button>
-                            <button
-                                type="button"
-                                className="btn btn-danger"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                            >
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Nguyen Phuc</td>
-                        <td>2002-11-12</td>
-                        <td>Nam</td>
-                        <td>202020202111</td>
-                        <td>0901232312</td>
-                        <td>quy12355@gmail.com</td>
-                        <td>Diamond</td>
-                        <td>Quang Nam 2</td>
-                        <td>
-                            <button className="btn btn-info">Edit</button>
-                            <button
-                                type="button"
-                                className="btn btn-danger"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                            >
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Nguyen Phuc Manh</td>
-                        <td>2000-11-02</td>
-                        <td>Nam</td>
-                        <td>2022020202</td>
-                        <td>090523231</td>
-                        <td>quy23@gmail.com</td>
-                        <td>Diamond</td>
-                        <td>Quang Nam 1</td>
-                        <td>
-                            <button className="btn btn-info">Edit</button>
-                            <button
-                                type="button"
-                                className="btn btn-danger"
+                                className="button-45"
                                 data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"
                             >
@@ -120,6 +55,47 @@ export function CustomerList() {
                     </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="demo">
+                <nav className="pagination-outer" aria-label="Page navigation">
+                    <ul className="pagination" style={{justifyContent:"center"}}>
+                        <li className="page-item">
+                            <a href="#" className="page-link" aria-label="Previous">
+                                <span aria-hidden="true">«</span>
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                1
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                2
+                            </a>
+                        </li>
+                        <li className="page-item active">
+                            <a className="page-link" href="#">
+                                3
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                4
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                5
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a href="#" className="page-link" aria-label="Next">
+                                <span aria-hidden="true">»</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div
                 className="modal fade"

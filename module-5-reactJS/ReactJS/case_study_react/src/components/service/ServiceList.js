@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
+import React from "react";
 
-export function Body() {
+export function ServiceList() {
     return (
         <div>
             <div className="vc_row wpb_row vc_row-fluid">
@@ -11,7 +12,7 @@ export function Body() {
                                 <div className="col-sm-12 text-center">
                                 </div>
                             </div>
-                            <div>
+                            <div className="text-right">
                                 <button className="button-35">
                                     <Link to="/createService" style={{textDecoration:"none"}}
                                     >
@@ -60,13 +61,16 @@ export function Body() {
                                                     <div className="room-price"><span></span></div>
                                                 </div>
                                                 <div className="col-auto ml-auto">
-                                                    <button type="button" className="btn btn-primary">
-                                                        <Link  to="/updateService">Edit</Link>
-                                                    </button>
-                                                    <button type="button" className="btn btn-danger"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                        Delete
-                                                    </button>
+                                                    <div className="d-flex">
+                                                        <button className=" button-45 mx-2" style={{textDecoration:"none",backgroundColor:"aliceblue"}}>
+                                                            <Link  to="/updateService" style={{textDecoration:"none"}}>Edit</Link>
+                                                        </button>
+                                                        <button type="button" className=" button-45"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            Delete
+                                                        </button>
+                                                    </div>
+
                                                     <div className="popover-content d-none">
                                                         <ul>
                                                             <li>Thang Máy Riêng</li>
@@ -79,6 +83,47 @@ export function Body() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="demo">
+                                <nav className="pagination-outer" aria-label="Page navigation">
+                                    <ul className="pagination" style={{justifyContent:"center"}}>
+                                        <li className="page-item">
+                                            <a href="#" className="page-link" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a className="page-link" href="#">
+                                                1
+                                            </a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a className="page-link" href="#">
+                                                2
+                                            </a>
+                                        </li>
+                                        <li className="page-item active">
+                                            <a className="page-link" href="#">
+                                                3
+                                            </a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a className="page-link" href="#">
+                                                4
+                                            </a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a className="page-link" href="#">
+                                                5
+                                            </a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a href="#" className="page-link" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
