@@ -16,9 +16,9 @@ export const deleteCustomer = async (id) =>{
 
     }
 }
-export const saveCustomer = async (service)=>{
+export const saveCustomer = async (customer)=>{
     try {
-        await axios.post("http://localhost:8080/customers",service)
+        await axios.post("http://localhost:8080/customers",customer)
 
     }catch (e) {
         console.log(e)

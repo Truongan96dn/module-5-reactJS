@@ -27,8 +27,6 @@ export function CreateService() {
                        }
                        create();
                        navigate("/body")
-
-
                    }}>
                {
                    <Form>

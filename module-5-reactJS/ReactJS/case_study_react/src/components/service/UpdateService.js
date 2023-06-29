@@ -7,7 +7,7 @@ import {toast} from "react-toastify";
 export function UpdateService() {
     const param = useParams();
     const navigate = useNavigate();
-    const [service, setService] = useState(null);
+    const [service, setService] = useState();
     const findById = async () => {
         const res = await facilityService.findById(param.id)
         setService(res)

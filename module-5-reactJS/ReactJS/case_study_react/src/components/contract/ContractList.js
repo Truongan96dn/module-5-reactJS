@@ -1,7 +1,14 @@
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useState} from "react";
+import * as contractService from "../../component-service/ContractService";
 
 export function ContractList() {
+    const [contracts,setContract] = useState([]);
+    const fetchApi = async ()=> {
+        const res = await contractService.findAllContract();
+        setContract(res);
+    }
+    fetchApi();
     return(
         <>
             <>
@@ -27,38 +34,19 @@ export function ContractList() {
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>04212131</td>
-                            <td>2023-12-12</td>
-                            <td>2023-12-15</td>
-                            <td>500$</td>
-                            <td>1000$</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>04212221</td>
-                            <td>2023-01-12</td>
-                            <td>2023-01-15</td>
-                            <td>500$</td>
-                            <td>1000$</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>04212531</td>
-                            <td>2023-02-12</td>
-                            <td>2023-02-15</td>
-                            <td>500$</td>
-                            <td>1000$</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>04212151</td>
-                            <td>2023-11-12</td>
-                            <td>2023-11-15</td>
-                            <td>500$</td>
-                            <td>1000$</td>
-                        </tr>
+                        {
+                            contracts.map((contract) => (
+                                <tr key={contract.id}>
+                                    <td>{contract.id}</td>
+                                    <td>{contract.contractNumber}</td>
+                                    <td>{contract.startDate}</td>
+                                    <td>{contract.endDate}</td>
+                                    <td>{contract.deposit}</td>
+                                    <td>{contract.total}</td>
+                                </tr>
+                            ))
+                        }
+
                         </tbody>
                     </table>
                 </div>

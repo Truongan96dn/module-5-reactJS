@@ -66,7 +66,7 @@ export function CustomerList() {
                             <td>{customer.address}</td>
                             <td className="d-flex">
                                 <button className=" button-45 mx-2" style={{textDecoration:"none",backgroundColor:"aliceblue"}}>
-                                    <Link to="/updateCustomer" style={{textDecoration:"none"}} >Edit</Link> </button>
+                                    <Link to={`/updateCustomer/${customer.id}`} style={{textDecoration:"none"}} >Edit</Link> </button>
                                 <button
                                     type="button" className=" button-45"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => handleDelete(customer.id,customer.name)}

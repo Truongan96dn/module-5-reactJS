@@ -5,6 +5,7 @@ import * as customerService from "../../component-service/CustomerService";
 import {toast} from "react-toastify";
 
 export function CreateCustomer() {
+    const navigate = useNavigate();
 
     return (
         <>
@@ -23,13 +24,13 @@ export function CreateCustomer() {
                     toast.success(<h2>Create Success</h2>)
                 }
                 create()
+                navigate("/customer")
             }}>
 
 
                 <Form>
                     <div className="formbold-main-wrapper">
                         <div className="formbold-form-wrapper">
-                            <form action="https://formbold.com/s/FORM_ID" method="POST">
                                 <div>
                                     <h1 style={{textAlign: "center", marginBottom: "2.5rem"}}>
                                         {" "}
@@ -42,7 +43,7 @@ export function CreateCustomer() {
                                         <label className="formbold-form-label"> Name </label>
                                     </div>
                                     <div>
-                                        <Field type="date" className="formbold-form-input"/>
+                                        <Field type="text" className="formbold-form-input" name="birthday" id ="birthday"/>
                                         <label className="formbold-form-label"> Birthday </label>
                                     </div>
                                 </div>
@@ -50,7 +51,8 @@ export function CreateCustomer() {
                                     <div className='mb-3 d-flex'>
                                         <label htmlFor='gender' className="formbold-form-label">Gender</label>
                                         <Field as='select' name='gender' id='gender' class="form-select mx-2"
-                                               style={{width: "50%", height: "61%"}}>
+                                               style={{width: "61%", height: "61%"}}>
+                                            <option disabled > Select </option>
                                             <option value='Male'>Male</option>
                                             <option value='Female'>Female</option>
                                             <option value='Other'>Other</option>
@@ -90,7 +92,6 @@ export function CreateCustomer() {
                                     </div>
                                 </div>
                                 <button type="submit" className="formbold-btn">Create</button>
-                            </form>
                         </div>
                     </div>
 
