@@ -1,24 +1,88 @@
 {
-  "service" : [
+  "service": [
     {
-      "id": 1,
-      "serviceName": "Phòng hướng biển",
-      "serviceType": "Room",
-      "serviceArea": 800,
-      "serviceCost": 400,
+      "id": 5,
+      "serviceName": "Phòng hướng BA",
+      "serviceType": "House",
+      "serviceArea": 500,
+      "serviceCost": 300,
       "maxGuest": 5,
-      "rentType": "Tháng",
-      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+      "rentType": "Ngày",
+      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg"
     },
     {
-      "id": 2,
-      "serviceName": "Phòng hướng ",
+      "id": 6,
+      "serviceName": "Phòng hướng B",
       "serviceType": "House",
-      "serviceArea": 800,
-      "serviceCost": 400,
+      "serviceArea": 500,
+      "serviceCost": 300,
       "maxGuest": 5,
-      "rentType": "Tháng",
-      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
+      "rentType": "Ngày"
+    },
+    {
+      "id": 7,
+      "serviceName": "Phòng hướng B",
+      "serviceType": "House",
+      "serviceArea": 500,
+      "serviceCost": 300,
+      "maxGuest": 5,
+      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
+      "rentType": "Ngày"
+    },
+    {
+      "serviceName": "Phong dep",
+      "serviceType": "Room",
+      "serviceArea": 99,
+      "serviceCost": 300,
+      "maxGuest": 3,
+      "rentType": "Month",
+      "img": "https://www.kayak.com/rimg/himg/f8/51/ac/revato-4210-12497415-817761.jpg?width=720&height=576&crop=true",
+      "id": 8
+    },
+    {
+      "serviceName": "house dep",
+      "serviceType": "House",
+      "serviceArea": 123,
+      "serviceCost": 123,
+      "maxGuest": 4,
+      "rentType": "Month",
+      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
+      "id": 9
+    },
+    {
+      "serviceName": "House sieu dep",
+      "serviceType": "House",
+      "serviceArea": 500,
+      "serviceCost": 400,
+      "maxGuest": 56,
+      "rentType": "Month",
+      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
+      "id": 10
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "An",
+      "birthday": "2000-12-12",
+      "gender": "Male",
+      "personalId": "123456",
+      "phone": "0901231",
+      "email": "an@gmail.com",
+      "typeOfCustomer": "Diamond",
+      "address": "Quang Nam"
+    },
+    {
+      "id": 3,
+      "name": "Anh",
+      "birthday": "2000-12-12",
+      "gender": "Male",
+      "personalId": "123456",
+      "phone": "0901231",
+      "email": "an@gmail.com",
+      "typeOfCustomer": "Diamond",
+      "address": "Quang Nam"
     }
   ]
 }

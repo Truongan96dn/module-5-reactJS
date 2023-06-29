@@ -1,7 +1,30 @@
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import * as customerService from "../../component-service/CustomerService";
+import {toast} from "react-toastify";
 
 export function CustomerList() {
+    const [customers,setCustomer] =  useState([]);
+    const [idDelete,setIdDelete] = useState();
+    const [nameDelete,setNameDelete] =useState();
+    const fetchApi = async ()=>{
+        const res = await customerService.findAllCustomer();
+        setCustomer(res)
+    }
+    function handleDelete(id, nameService) {
+        setIdDelete(id);
+        setNameDelete(nameService);
+    }
+    const deleteCus = async (id) => {
+         await customerService.deleteCustomer(id);
+         fetchApi();
+        toast.success(<h2>Delete Success</h2>)
+    }
+
+    useEffect(()=>{
+        fetchApi()
+
+    },[])
     return(
         <>
             <div className="text-right">
@@ -30,29 +53,30 @@ export function CustomerList() {
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Nguyen Phuc Quy</td>
-                        <td>2000-11-12</td>
-                        <td>Nam</td>
-                        <td>202020202</td>
-                        <td>090123231</td>
-                        <td>quy123@gmail.com</td>
-                        <td>Diamond</td>
-                        <td>Quang Nam</td>
-                        <td className="d-flex">
-                            <button className=" button-45 mx-2" style={{textDecoration:"none",backgroundColor:"aliceblue"}}>
-                                <Link to="/updateCustomer" style={{textDecoration:"none"}} >Edit</Link> </button>
-                            <button
-                                type="button"
-                                className="button-45"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                            >
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
+                    {customers.map((customer) =>(
+                        <tr key={customer.id}>
+                            <td>{customer.id}</td>
+                            <td>{customer.name}</td>
+                            <td>{customer.birthday}</td>
+                            <td>{customer.gender}</td>
+                            <td>{customer.personalId}</td>
+                            <td>{customer.phone}</td>
+                            <td>{customer.email}</td>
+                            <td>{customer.typeOfCustomer}</td>
+                            <td>{customer.address}</td>
+                            <td className="d-flex">
+                                <button className=" button-45 mx-2" style={{textDecoration:"none",backgroundColor:"aliceblue"}}>
+                                    <Link to="/updateCustomer" style={{textDecoration:"none"}} >Edit</Link> </button>
+                                <button
+                                    type="button" className=" button-45"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => handleDelete(customer.id,customer.name)}
+                                >
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    ) )}
+
                     </tbody>
                 </table>
             </div>
@@ -117,7 +141,7 @@ export function CustomerList() {
                                 aria-label="Close"
                             />
                         </div>
-                        <div className="modal-body">Do you want to delete customer</div>
+                        <div className="modal-body">bạn có muốn xoá khách hàng  <span style={{color:"red"}}>{nameDelete}</span></div>
                         <div className="modal-footer">
                             <button
                                 type="button"
@@ -126,7 +150,7 @@ export function CustomerList() {
                             >
                                 Close
                             </button>
-                            <button type="button" className="btn btn-danger">
+                            <button type="submit" className="btn btn-danger" onClick={()=>deleteCus(idDelete)}  data-bs-dismiss="modal">
                                 Delete
                             </button>
                         </div>

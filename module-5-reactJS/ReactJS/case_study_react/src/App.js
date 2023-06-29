@@ -14,6 +14,10 @@ import {CreateCustomer} from "./components/customer/CreateCustomer";
 import {UpdateCustomer} from "./components/customer/UpdateCustomer";
 import {ContractList} from "./components/contract/ContractList";
 import {CreateContract} from "./components/contract/CreateContract";
+import {ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 function App() {
   return (
@@ -22,13 +26,14 @@ function App() {
         <Routes>
             <Route path={"/body"} element={<ServiceList/>}/>
             <Route path={"/createService"} element={<CreateService/>}/>
-            <Route path={"/updateService"} element={<UpdateService/>}/>
+            <Route path={"/updateService/:id"} element={<UpdateService/>}/>
             <Route path={"/customer"} element={<CustomerList/>}/>
             <Route path={"/createCustomer"} element={<CreateCustomer/>}/>
             <Route path={"/updateCustomer"} element={<UpdateCustomer/>}/>
             <Route path={"/contract"} element={<ContractList/>}/>
             <Route path={"/createContract"} element={<CreateContract/>}/>
         </Routes>
+        <ToastContainer/>
         <Footer/>
     </>
   );
