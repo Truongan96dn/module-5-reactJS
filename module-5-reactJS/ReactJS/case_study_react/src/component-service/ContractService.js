@@ -1,7 +1,7 @@
 import axios from "axios";
 export const findAllContract= async () =>{
     try {
-        const res = await axios.get("http://localhost:8080/contracts")
+        const res = await axios.get("http://localhost:8080/contracts?_page=1&_limit=5")
         return res.data
     }catch (e) {
         console.log(e)

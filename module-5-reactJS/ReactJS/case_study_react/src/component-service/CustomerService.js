@@ -1,6 +1,15 @@
 import axios from "axios";
 export const findAllCustomer= async () =>{
     try {
+        const res = await axios.get("http://localhost:8080/customers?_page=1&_limit=5")
+        return res.data
+    }catch (e) {
+        console.log(e)
+
+    }
+}
+export const findAll= async () =>{
+    try {
         const res = await axios.get("http://localhost:8080/customers")
         return res.data
     }catch (e) {

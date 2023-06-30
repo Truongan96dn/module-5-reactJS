@@ -8747,7 +8747,7 @@ table.table-striped.w-100 {
 }
 
 .text-right {
-  text-align: right !important;
+  text-align: center !important;
 }
 
 .text-center {
@@ -17546,4 +17546,7 @@ body {
   background-color: #D33A2C;
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
   color: #FFFFFF;
+}
+.error-r{
+  color: red;
 }

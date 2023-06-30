@@ -1,74 +1,89 @@
 {
   "service": [
     {
-      "id": 5,
-      "serviceName": "Phòng hướng BA",
-      "serviceType": "House",
-      "serviceArea": 500,
+      "id": 1,
+      "serviceName": "Villa Huong Bien",
+      "serviceType": "Villa",
+      "serviceArea": 200,
       "serviceCost": 300,
       "maxGuest": 5,
-      "rentType": "Ngày",
+      "rentType": "Date",
+      "roomStandard": "Relax Vip",
+      "numberOfFloor": 2,
+      "anotherDes": "Place for Children",
+      "poolArea": 8,
+      "freeService": "",
+      "img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/228536952.jpg?k=59c2442e436341093debdbdcce62e50a0ecab133d0e628614f943b65e38013ea&o=&hp=1"
+    },
+    {
+      "id": 2,
+      "serviceName": "Room huong bien",
+      "serviceType": "Room",
+      "serviceArea": 20,
+      "serviceCost": 200,
+      "maxGuest": 4,
+      "rentType": "Date",
+      "roomStandard": "",
+      "numberOfFloor": null,
+      "anotherDes": "",
+      "poolArea": "",
+      "freeService": "Compliment Water Bottle",
       "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg"
     },
     {
-      "id": 6,
-      "serviceName": "Phòng hướng B",
+      "serviceName": "House Family",
       "serviceType": "House",
-      "serviceArea": 500,
-      "serviceCost": 300,
-      "maxGuest": 5,
-      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
-      "rentType": "Ngày"
-    },
-    {
-      "id": 7,
-      "serviceName": "Phòng hướng B",
-      "serviceType": "House",
-      "serviceArea": 500,
-      "serviceCost": 300,
-      "maxGuest": 5,
-      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
-      "rentType": "Ngày"
-    },
-    {
-      "serviceName": "Phong dep",
-      "serviceType": "Room",
-      "serviceArea": 99,
-      "serviceCost": 300,
-      "maxGuest": 3,
-      "rentType": "Month",
-      "img": "https://www.kayak.com/rimg/himg/f8/51/ac/revato-4210-12497415-817761.jpg?width=720&height=576&crop=true",
-      "id": 8
-    },
-    {
-      "serviceName": "house dep",
-      "serviceType": "House",
-      "serviceArea": 123,
-      "serviceCost": 123,
+      "serviceArea": 100,
+      "serviceCost": 500,
       "maxGuest": 4,
       "rentType": "Month",
-      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
-      "id": 9
+      "roomStandard": "Luxury",
+      "numberOfFloor": 2,
+      "anotherDes": "Game room",
+      "poolArea": "",
+      "freeService": "",
+      "img": "https://i.ytimg.com/vi/fqFaO8HeHMk/maxresdefault.jpg",
+      "id": 3
     },
     {
-      "serviceName": "House sieu dep",
-      "serviceType": "House",
-      "serviceArea": 500,
-      "serviceCost": 400,
-      "maxGuest": 56,
-      "rentType": "Month",
-      "img": "https://furamavillasdanang.com/wp-content/uploads/2017/03/One-Bedroom-Pool-Villa-13-700x400.jpg",
-      "id": 10
+      "serviceName": "President Suite",
+      "serviceType": "Room",
+      "serviceArea": 50,
+      "serviceCost": 1000,
+      "maxGuest": 2,
+      "rentType": "Date",
+      "roomStandard": "",
+      "numberOfFloor": null,
+      "anotherDes": "",
+      "poolArea": "",
+      "freeService": "All Free",
+      "img": "https://potiquehotel.com/uploads/files/2021/06/08/PRS-5-.jpg",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "serviceName": "Luxury Room",
+      "serviceType": "Room",
+      "serviceArea": 23,
+      "serviceCost": 200,
+      "maxGuest": 2,
+      "rentType": "Date",
+      "roomStandard": "Luxury",
+      "numberOfFloor": 2,
+      "anotherDes": "Place for Children",
+      "poolArea": "",
+      "freeService": "All Free",
+      "img": "https://potiquehotel.com/uploads/files/2021/06/08/PRS-5-.jpg"
     }
   ],
   "customers": [
     {
       "id": 1,
-      "name": "An",
-      "birthday": "2000-12-12",
+      "name": "Ho Anh",
+      "birthday": "2000-12-13",
       "gender": "Female",
-      "personalId": "123456",
-      "phone": "090123134",
+      "personalId": "999000000",
+      "phone": "0901231341",
       "email": "an@gmail.com",
       "typeOfCustomer": "Diamond",
       "address": "Quang Nam"
@@ -86,7 +101,7 @@
     },
     {
       "id": 4,
-      "name": "Ha Thi Thuy Van",
+      "name": "Anh",
       "birthday": "1996-01-02",
       "gender": "Other",
       "personalId": "12312312",
@@ -94,24 +109,103 @@
       "email": "httv@gmai.com",
       "typeOfCustomer": "Gold",
       "address": "Da Nang"
+    },
+    {
+      "id": 5,
+      "name": "Ha anh",
+      "birthday": "1996-01-02",
+      "gender": "Other",
+      "personalId": "12312312",
+      "phone": "01287027257",
+      "email": "httv@gmai.com",
+      "typeOfCustomer": "Gold",
+      "address": "Da Nang"
+    },
+    {
+      "id": 6,
+      "name": "Van anhh",
+      "birthday": "1996-01-02",
+      "gender": "Other",
+      "personalId": "12312312",
+      "phone": "01287027257",
+      "email": "httv@gmai.com",
+      "typeOfCustomer": "Gold",
+      "address": "Da Nang"
+    },
+    {
+      "id": 7,
+      "name": "Thuy Van",
+      "birthday": "1996-01-02",
+      "gender": "Other",
+      "personalId": "12312312",
+      "phone": "01287027257",
+      "email": "httv@gmai.com",
+      "typeOfCustomer": "Gold",
+      "address": "Da Nang"
+    },
+    {
+      "id": 8,
+      "name": "taiiii",
+      "birthday": "1996-06-12",
+      "gender": "Male",
+      "personalId": "323232",
+      "phone": "0935646891",
+      "email": "star_cowboy2007@gmail.com",
+      "typeOfCustomer": "Diamond",
+      "address": "da nang"
+    },
+    {
+      "name": "Ho Truong An",
+      "birthday": "2023-06-22",
+      "gender": "Male",
+      "personalId": "999999999",
+      "phone": "0905130596",
+      "email": "dinh@gmai.com",
+      "typeOfCustomer": "Diamond",
+      "address": "Da Nang",
+      "id": 9
     }
   ],
   "contracts": [
     {
-      "id": 1,
-      "contractNumber": "1234",
-      "startDate": "2020-12-11",
-      "endDate": "2020-12-12",
-      "deposit": 500,
-      "total": 1000
+      "contractNumber": "Vl-123",
+      "customerId": 4,
+      "serviceId": 1,
+      "startDate": "2023-06-30",
+      "endDate": "2023-07-01",
+      "deposit": 50,
+      "total": 100,
+      "id": 1
     },
     {
-      "contractNumber": "45677",
-      "startDate": "2020-12-12",
-      "endDate": "2020-12-23",
-      "deposit": 540,
-      "total": 1030,
+      "contractNumber": "Ro-123",
+      "customerId": "3",
+      "serviceId": "2",
+      "startDate": "2023-06-30",
+      "endDate": "2023-07-01",
+      "deposit": 100,
+      "total": 200,
       "id": 2
+    },
+    {
+      "contractNumber": "Ho-123",
+      "customerId": "1",
+      "serviceId": "3",
+      "startDate": "2023-06-16",
+      "endDate": "2023-06-23",
+      "deposit": 250,
+      "total": 500,
+      "id": 3
+    },
+    {
+      "contractNumber": "hofami-123",
+      "customerId": "9",
+      "serviceId": "3",
+      "startDate": "2023-06-23",
+      "endDate": "2023-07-01",
+      "deposit": 250,
+      "total": 500,
+      "id": 4
     }
   ]
 }

@@ -2,11 +2,52 @@ import {Link} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import * as customerService from "../../component-service/CustomerService";
 import {toast} from "react-toastify";
+import ReactPaginate from "react-paginate";
 
 export function CustomerList() {
     const [customers,setCustomer] =  useState([]);
     const [idDelete,setIdDelete] = useState();
     const [nameDelete,setNameDelete] =useState();
+
+    const [pageCount, setPageCount] = useState(0);
+    let limit = 5;
+    const getComments = async () => {
+        const res = await fetch(
+            `http://localhost:8080/customers?_page=1&_limit=${limit}`
+            // `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=${limit}`
+        );
+        const data = await res.json();
+        const total = res.headers.get("x-total-count");
+        setPageCount(Math.ceil(total / limit));
+        // console.log(Math.ceil(total/12));
+        setCustomer(data);
+    };
+    useEffect(() => {
+        fetchApi()
+        getComments();
+    }, [limit]);
+    const fetchComments = async (currentPage) => {
+        const res = await fetch(
+            `http://localhost:8080/customers?_page=${currentPage}&_limit=${limit}`
+            // `https://jsonplaceholder.typicode.com/comments?_page=${currentPage}&_limit=${limit}`
+        );
+        const data = await res.json();
+        return data;
+    };
+    const handlePageClick = async (data) => {
+
+        let currentPage = data.selected + 1;
+
+        const commentsFormServer = await fetchComments(currentPage);
+
+        setCustomer(commentsFormServer);
+        // scroll to the top
+        //window.scrollTo(0, 0)
+    };
+
+
+
+
     const fetchApi = async ()=>{
         const res = await customerService.findAllCustomer();
         setCustomer(res)
@@ -22,7 +63,7 @@ export function CustomerList() {
     }
 
     useEffect(()=>{
-        fetchApi()
+
 
     },[])
     return(
@@ -31,7 +72,7 @@ export function CustomerList() {
                 <button className="button-35">
                     <Link to="/createCustomer" style={{textDecoration:"none"}}
                     >
-                        Add new Customer
+                        Add New Customer
                     </Link>
                 </button>
             </div>
@@ -80,47 +121,26 @@ export function CustomerList() {
                     </tbody>
                 </table>
             </div>
-            <div className="demo">
-                <nav className="pagination-outer" aria-label="Page navigation">
-                    <ul className="pagination" style={{justifyContent:"center"}}>
-                        <li className="page-item">
-                            <a href="#" className="page-link" aria-label="Previous">
-                                <span aria-hidden="true">«</span>
-                            </a>
-                        </li>
-                        <li className="page-item">
-                            <a className="page-link" href="#">
-                                1
-                            </a>
-                        </li>
-                        <li className="page-item">
-                            <a className="page-link" href="#">
-                                2
-                            </a>
-                        </li>
-                        <li className="page-item active">
-                            <a className="page-link" href="#">
-                                3
-                            </a>
-                        </li>
-                        <li className="page-item">
-                            <a className="page-link" href="#">
-                                4
-                            </a>
-                        </li>
-                        <li className="page-item">
-                            <a className="page-link" href="#">
-                                5
-                            </a>
-                        </li>
-                        <li className="page-item">
-                            <a href="#" className="page-link" aria-label="Next">
-                                <span aria-hidden="true">»</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+
+            <ReactPaginate
+                previousLabel={"previous"}
+                nextLabel={"next"}
+                breakLabel={"..."}
+                pageCount={pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={3}
+                onPageChange={handlePageClick}
+                containerClassName={"pagination justify-content-center"}
+                pageClassName={"page-item"}
+                pageLinkClassName={"page-link"}
+                previousClassName={"page-item"}
+                previousLinkClassName={"page-link"}
+                nextClassName={"page-item"}
+                nextLinkClassName={"page-link"}
+                breakClassName={"page-item"}
+                breakLinkClassName={"page-link"}
+                activeClassName={"active"}
+            />
             <div
                 className="modal fade"
                 id="exampleModal"
