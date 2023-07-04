@@ -68,7 +68,7 @@ export function CreateCustomer() {
                             </div>
                             <div className="d-flex" style={{justifyContent: "space-between"}}>
                                 <div className='mb-3 d-flex'>
-                                    <label htmlFor='gender' className="formbold-form-label">Gender</label>
+                                    <label htmlFor='gender' className="formbold-form-label" style={{marginTop :"13px"}}>Gender</label>
                                     <Field as='select' name='gender' id='gender' class="form-control"
                                            style={{width: "61%", height: "61%"}}>
                                         <option value='Male'>Male</option>

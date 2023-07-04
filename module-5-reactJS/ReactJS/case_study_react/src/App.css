@@ -17338,7 +17338,7 @@ select#lang_dropdown {
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 2px;
   box-sizing: border-box;
 }
 
@@ -17550,3 +17550,16 @@ body {
 .error-r{
   color: red;
 }
+.vc_custom_1533119100314{
+  margin-top: -100px !important;
+  background-image: url(https://furamavietnam.com/wp-content/uploads/2018/08/banner01.jpg?id=1433) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.vc_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}.overflowUnset {
+   overflow: unset !important;
+ }

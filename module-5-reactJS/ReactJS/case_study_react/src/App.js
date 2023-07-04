@@ -16,6 +16,7 @@ import {ContractList} from "./components/contract/ContractList";
 import {CreateContract} from "./components/contract/CreateContract";
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {Home} from "./components/Home";
 
 
 
@@ -32,6 +33,7 @@ function App() {
             <Route path={"/updateCustomer/:id"} element={<UpdateCustomer/>}/>
             <Route path={"/contract"} element={<ContractList/>}/>
             <Route path={"/createContract"} element={<CreateContract/>}/>
+            <Route path={"/home"} element={<Home/>}/>
         </Routes>
         <ToastContainer/>
         <Footer/>

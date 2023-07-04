@@ -1,0 +1,81 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "orderCode": "agb",
+      "productId": 1,
+      "buyDate": "23/05/2023",
+      "price": 200,
+      "quantity": 2,
+      "total": 400
+    },
+    {
+      "orderCode": "123",
+      "productId": 2,
+      "buyDate": "23/05/2023",
+      "price": 22,
+      "quantity": 2,
+      "total": 44,
+      "id": 2
+    },
+    {
+      "orderCode": "vl123",
+      "productId": "1",
+      "buyDate": "23/05/2023",
+      "price": 12,
+      "quantity": 2,
+      "total": 24,
+      "id": 3
+    },
+    {
+      "orderCode": "vl32",
+      "productId": "1",
+      "buyDate": "23/05/2023",
+      "price": 3,
+      "quantity": 2,
+      "total": 6,
+      "id": 4
+    },
+    {
+      "orderCode": "abc123",
+      "productId": "1",
+      "buyDate": "23/05/2023",
+      "price": 23,
+      "quantity": 1,
+      "total": 23,
+      "id": 5
+    },
+    {
+      "orderCode": "abc",
+      "productId": "2",
+      "buyDate": "22/05/2023",
+      "price": 5,
+      "quantity": 4,
+      "total": 20,
+      "id": 6
+    },
+    {
+      "orderCode": "douong123",
+      "productId": "2",
+      "buyDate": "23/06/2023",
+      "price": 12,
+      "quantity": 2,
+      "total": 24,
+      "id": 7
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "thuc an"
+    },
+    {
+      "id": 2,
+      "name": "do uong"
+    },
+    {
+      "id": 3,
+      "name": "do choi"
+    }
+  ]
+}

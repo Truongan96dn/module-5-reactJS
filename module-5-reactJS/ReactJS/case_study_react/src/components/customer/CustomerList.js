@@ -78,48 +78,51 @@ export function CustomerList() {
             </div>
             <div align="center">
                 <h1> Customer List</h1>
-                <table className="table table-striped">
-                    <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Birthday</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Personal ID</th>
-                        <th scope="col">Phone number</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Type of customer</th>
-                        <th scope="col">Address</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {customers.map((customer) =>(
-                        <tr key={customer.id}>
-                            <td>{customer.id}</td>
-                            <td>{customer.name}</td>
-                            <td>{customer.birthday}</td>
-                            <td>{customer.gender}</td>
-                            <td>{customer.personalId}</td>
-                            <td>{customer.phone}</td>
-                            <td>{customer.email}</td>
-                            <td>{customer.typeOfCustomer}</td>
-                            <td>{customer.address}</td>
-                            <td className="d-flex">
-                                <button className=" button-45 mx-2" style={{textDecoration:"none",backgroundColor:"aliceblue"}}>
-                                    <Link to={`/updateCustomer/${customer.id}`} style={{textDecoration:"none"}} >Edit</Link> </button>
-                                <button
-                                    type="button" className=" button-45"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => handleDelete(customer.id,customer.name)}
-                                >
-                                    Delete
-                                </button>
-                            </td>
+                <div className="container">
+                    <table className="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Birthday</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Personal ID</th>
+                            <th scope="col">Phone number</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Type of customer</th>
+                            <th scope="col">Address</th>
+                            <th>Action</th>
                         </tr>
-                    ) )}
+                        </thead>
+                        <tbody>
+                        {customers.map((customer) =>(
+                            <tr key={customer.id}>
+                                <td>{customer.id}</td>
+                                <td>{customer.name}</td>
+                                <td>{customer.birthday}</td>
+                                <td>{customer.gender}</td>
+                                <td>{customer.personalId}</td>
+                                <td>{customer.phone}</td>
+                                <td>{customer.email}</td>
+                                <td>{customer.typeOfCustomer}</td>
+                                <td>{customer.address}</td>
+                                <td className="d-flex">
+                                    <button className=" button-45 mx-2" style={{textDecoration:"none",backgroundColor:"aliceblue"}}>
+                                        <Link to={`/updateCustomer/${customer.id}`} style={{textDecoration:"none"}} >Edit</Link> </button>
+                                    <button
+                                        type="button" className=" button-45"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => handleDelete(customer.id,customer.name)}
+                                    >
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        ) )}
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
 
             <ReactPaginate

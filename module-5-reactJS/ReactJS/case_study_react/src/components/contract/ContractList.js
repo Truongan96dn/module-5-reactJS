@@ -77,37 +77,40 @@ export function ContractList() {
                 </div>
                 <div align="center">
                     <h1> Contract List</h1>
-                    <table className="table table-striped">
-                        <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Contract Number</th>
-                            <th scope="col">Customer Name</th>
-                            <th scope="col">Service Name</th>
-                            <th scope="col">Start Date</th>
-                            <th scope="col">End Date</th>
-                            <th scope="col">Deposit</th>
-                            <th scope="col">Total Payment</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {
-                            contracts.map((contract) => (
-                                <tr key={contract.id}>
-                                    <td>{contract.id}</td>
-                                    <td>{contract.contractNumber}</td>
-                                    <td>{customer.find((cus) => cus.id == contract.customerId) ?.name}</td>
-                                    <td>{service.find((service) => service.id == contract.serviceId) ?.serviceName}</td>
-                                    <td>{contract.startDate}</td>
-                                    <td>{contract.endDate}</td>
-                                    <td>{contract.deposit}</td>
-                                    <td>{contract.total}</td>
-                                </tr>
-                            ))
-                        }
+                    <div className="container">
+                        <table className="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Contract Number</th>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Service Name</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Deposit</th>
+                                <th scope="col">Total Payment</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {
+                                contracts.map((contract) => (
+                                    <tr key={contract.id}>
+                                        <td>{contract.id}</td>
+                                        <td>{contract.contractNumber}</td>
+                                        <td>{customer.find((cus) => cus.id == contract.customerId) ?.name}</td>
+                                        <td>{service.find((service) => service.id == contract.serviceId) ?.serviceName}</td>
+                                        <td>{contract.startDate}</td>
+                                        <td>{contract.endDate}</td>
+                                        <td>{contract.deposit}</td>
+                                        <td>{contract.total}</td>
+                                    </tr>
+                                ))
+                            }
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
                 <ReactPaginate
                     previousLabel={"previous"}

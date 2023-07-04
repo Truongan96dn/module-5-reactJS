@@ -353,7 +353,7 @@ export function Header() {
                                             id="nav-menu-item-5006"
                                             className="nav-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"
                                         >
-                                            <Link to="/"
+                                            <Link to="/home"
 
                                                   className="nav-link main-menu-link"
                                             >

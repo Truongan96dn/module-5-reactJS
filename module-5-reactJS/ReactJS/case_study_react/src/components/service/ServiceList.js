@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import * as facilityService from "../../component-service/FacilitiesService";
 import {toast} from "react-toastify";
 import ReactPaginate from "react-paginate";
+import {Home} from "../Home";
 
 
 export function ServiceList() {
@@ -66,7 +67,9 @@ export function ServiceList() {
 
 
     return (
+        
         <div>
+            <Home/>
             <div className="vc_row wpb_row vc_row-fluid">
                 <div className="wpb_column vc_column_container vc_col-sm-12">
                     <div className="vc_column-inner ">
